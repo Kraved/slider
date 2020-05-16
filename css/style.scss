@@ -1,0 +1,68 @@
+.slider {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+
+  overflow: hidden;
+}
+
+// Images
+.slider__images {
+  background-color: #f5f2ff;
+
+  display: flex;
+  margin-bottom: 10px;
+  width: 700px;
+
+  transition: transform .6s linear;
+}
+
+// Buttons
+.slider__btn {
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 42px);
+  padding: 10px 20px;
+
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 50px;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+
+    background-color: rgba(0, 0, 0, .4);
+
+    cursor: pointer;
+  }
+}
+
+.slider__btn-prev {
+  left: 0;
+}
+
+.slider__btn-next {
+  right: 0;
+}
+
+// Dots
+.slider__dots {
+  display: flex;
+  align-self: center;
+}
+.slider__dot {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+
+  background-color: #ff8c82;
+
+  border: #ff8c82 1px solid;
+  border-radius: 50%;
+}
+
+.slider__dot--active {
+  background-color: #7a2323;
+  border: #7a2323 1px solid;
+}
